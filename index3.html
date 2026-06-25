@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Student Dashboard</title>
+<link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h2>🎓 Student Portal</h2>
+
+        <ul>
+            <li onclick="showSection('dashboardPage')">🏠 Dashboard</li>
+            <li onclick="showSection('attendancePage')">📊 Attendance</li>
+            <li onclick="showSection('assignmentPage')">📝 Assignments</li>
+            <li onclick="showSection('quizPage')">🧠 Quiz</li>
+        </ul>
+    </aside>
+
+    <main class="main">
+
+        <h1>Smart Student Dashboard</h1>
+
+        <!-- Dashboard -->
+        <section id="dashboardPage" class="content-section">
+
+            <div class="card">
+                <h2>👨‍🎓 Student Profile</h2>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Course:</strong> B.Tech CSE</p>
+                <p><strong>Semester:</strong> 5</p>
+                <p><strong>CGPA:</strong> 8.5</p>
+            </div>
+
+            <div class="card">
+                <h2>📈 Course Progress</h2>
+
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+
+                <p>75% Completed</p>
+            </div>
+
+            <div class="card">
+                <h2>💡 Developer Quote</h2>
+                <p>"First solve the problem. Then write the code."</p>
+            </div>
+
+            <div class="card">
+                <h2>🌐 Tech Fact API</h2>
+                <p id="fact">Click below to load a tech fact.</p>
+                <button onclick="getFact()">Get Tech Fact</button>
+            </div>
+
+        </section>
+
+        <!-- Attendance -->
+        <section id="attendancePage" class="content-section">
+
+            <div class="card">
+                <h2>📊 Attendance Report</h2>
+
+                <p>Web Development - 92%</p>
+                <p>Java - 88%</p>
+                <p>Database - 84%</p>
+
+                <hr>
+
+                <h3>Overall Attendance: 88%</h3>
+            </div>
+
+        </section>
+
+        <!-- Assignments -->
+        <section id="assignmentPage" class="content-section">
+
+            <div class="card">
+                <h2>📝 Assignments</h2>
+
+                <ul>
+                    <li>✅ Web Development Project</li>
+                    <li>✅ Database Assignment</li>
+                    <li>⏳ Java Mini Project</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Quiz -->
+        <section id="quizPage" class="content-section">
+
+            <div class="card">
+
+                <h2>🧠 Interactive Quiz</h2>
+
+                <h3 id="question"></h3>
+
+                <div id="options"></div>
+
+                <div id="feedback"></div>
+
+                <button id="nextBtn"
+                        onclick="nextQuestion()"
+                        style="display:none;">
+                    Next Question
+                </button>
+
+                <div id="result"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script3.js"></script>
+
+</body>
+</html>
